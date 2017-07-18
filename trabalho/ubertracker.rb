@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-uri = URI.parse('https://sandbox-api.uber.com/v1/products')
+uri = URI.parse('https://sandbox-api.uber.com/v1.2/products')
 
 #AC
 @S1 = []

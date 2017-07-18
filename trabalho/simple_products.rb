@@ -13,8 +13,8 @@ uri = URI.parse('https://sandbox-api.uber.com/v1/products')
 
 parameters = {
   :server_token => ENV['UBER_SERVER_TOKEN'],
-  :latitude => -23.6821591,
-  :longitude => -46.8761801
+  :latitude => -23.4345529,
+  :longitude => -46.4803147
 }
 
 uri.query = URI.encode_www_form( parameters )
@@ -52,7 +52,7 @@ parsed["products"].each do |products|
 end
 =end
 
-#puts JSON.pretty_generate( JSON.parse( response ) )
+puts JSON.pretty_generate( JSON.parse( response ) )
 =begin
 
 print" RIO DE JANEIRO"
