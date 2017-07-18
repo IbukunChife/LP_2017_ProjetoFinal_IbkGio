@@ -2,8 +2,6 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-
-
 @S1 = []
 @cont1=0
 @cont2=0
@@ -24,7 +22,7 @@ uri.query = URI.encode_www_form( parameters )
 response = Net::HTTP.get( uri )
 
 parsed=JSON.parse( response )
-# imprimir o numéro de caros 
+# imprimir o numéro de carros 
 parsed["products"].each do |products|
 	@S1 << products["product_group"]
 end
@@ -39,11 +37,8 @@ for i in (0...@S1.size)
 	end
 end
 
-puts " o numero de Taxi Uber em SaoPaulo é: #{@S1.size}"
-puts " o numero de Taxi UberX : #{@cont1}"
-puts " o numero de Taxi UberBlack: #{@cont2}"
-puts " o numero de Taxi Uber Pool: #{@cont3}"
-
+puts "O número de Uber em São Paulo é: #{@S1.size}"
+puts "sendo #{@cont1} UberX, #{@cont2} UberBlack e #{@cont3} UberPool"
 
 
 =begin
