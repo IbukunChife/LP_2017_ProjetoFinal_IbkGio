@@ -20,12 +20,10 @@ response = Net::HTTP.get( uri )
 parsed=JSON.parse( response )
 
 parsed["products"].each do |products|
-	if( products["capacity"] == true)
-		n = n +1 
-	end
+	p  products["capacity"]
 end
  
- puts n
+
 #puts JSON.pretty_generate( JSON.parse( response ) )
 =begin
 
